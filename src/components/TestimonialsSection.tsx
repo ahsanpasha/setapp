@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ChevronLeft, ChevronRight, Twitter, Facebook, Youtube } from "lucide-react";
+import { ChevronLeft, ChevronRight, Twitter, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const TestimonialsSection = () => {
@@ -19,42 +19,37 @@ const TestimonialsSection = () => {
       platform: "twitter",
     },
     {
-      text: "For those of you that wonder where I discovered all the awesome apps for my Mac that I use, a lot of them are from Setapp!",
+      text: "For those of you that wonder where I discover all the awesome apps for my Mac that I use, a lot of them are from Setapp!",
       author: "Mason Oh! Secret",
       handle: "YouTube content creator",
       platform: "youtube",
     },
   ];
 
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % Math.ceil(testimonials.length / 3));
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev - 1 + Math.ceil(testimonials.length / 3)) % Math.ceil(testimonials.length / 3));
-  };
+  const nextPage = () => setCurrentPage((prev) => (prev + 1) % 5);
+  const prevPage = () => setCurrentPage((prev) => (prev - 1 + 5) % 5);
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-16 px-6 bg-[#f5f5f0]">
       <div className="container mx-auto max-w-6xl">
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 md:mb-0">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-background mb-4 md:mb-0">
             Setapp in your words.
           </h2>
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 text-xs text-background/60">
               <span>Who is talking about Setapp:</span>
             </div>
-            <div className="flex items-center gap-3">
-              <a href="#" className="w-8 h-8 rounded-full bg-sky flex items-center justify-center hover:opacity-80 transition-opacity">
-                <Twitter className="w-4 h-4 text-foreground" />
+            <div className="flex items-center gap-2">
+              <a href="#" className="w-7 h-7 rounded-full bg-[#1da1f2] flex items-center justify-center hover:opacity-80 transition-opacity">
+                <Twitter className="w-3.5 h-3.5 text-foreground" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-coral flex items-center justify-center hover:opacity-80 transition-opacity">
-                <Youtube className="w-4 h-4 text-foreground" />
+              <a href="#" className="w-7 h-7 rounded-full bg-[#ff0000] flex items-center justify-center hover:opacity-80 transition-opacity">
+                <Youtube className="w-3.5 h-3.5 text-foreground" />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full bg-[#1877f2] flex items-center justify-center hover:opacity-80 transition-opacity">
-                <Facebook className="w-4 h-4 text-foreground" />
+              <a href="#" className="w-7 h-7 rounded-full bg-[#ff4500] flex items-center justify-center hover:opacity-80 transition-opacity">
+                <span className="text-foreground text-xs font-bold">r/</span>
               </a>
             </div>
             <div className="flex gap-2">
@@ -62,7 +57,7 @@ const TestimonialsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={prevPage}
-                className="rounded-full"
+                className="rounded-full h-8 w-8 bg-transparent border-background/20 text-background/60 hover:bg-background/10 hover:text-background"
               >
                 <ChevronLeft className="w-4 h-4" />
               </Button>
@@ -70,7 +65,7 @@ const TestimonialsSection = () => {
                 variant="outline"
                 size="icon"
                 onClick={nextPage}
-                className="rounded-full"
+                className="rounded-full h-8 w-8 bg-transparent border-background/20 text-background/60 hover:bg-background/10 hover:text-background"
               >
                 <ChevronRight className="w-4 h-4" />
               </Button>
@@ -79,25 +74,25 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {testimonials.map((testimonial, i) => (
             <div
               key={i}
-              className="bg-card rounded-2xl p-6 border border-border hover:border-primary/50 transition-colors"
+              className="bg-foreground rounded-2xl p-5 hover:shadow-lg transition-shadow"
             >
-              <p className="text-foreground text-sm leading-relaxed mb-6">
+              <p className="text-background text-sm leading-relaxed mb-5">
                 {testimonial.text}
               </p>
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-foreground font-medium text-sm">{testimonial.author}</p>
-                  <p className="text-muted-foreground text-xs">{testimonial.handle}</p>
+                  <p className="text-background font-medium text-sm">{testimonial.author}</p>
+                  <p className="text-background/60 text-xs">{testimonial.handle}</p>
                 </div>
                 {testimonial.platform === 'twitter' && (
-                  <Twitter className="w-5 h-5 text-sky" />
+                  <Twitter className="w-4 h-4 text-[#1da1f2]" />
                 )}
                 {testimonial.platform === 'youtube' && (
-                  <Youtube className="w-5 h-5 text-coral" />
+                  <Youtube className="w-4 h-4 text-[#ff0000]" />
                 )}
               </div>
             </div>
@@ -111,7 +106,7 @@ const TestimonialsSection = () => {
               key={i}
               onClick={() => setCurrentPage(i)}
               className={`w-2 h-2 rounded-full transition-colors ${
-                i === currentPage ? 'bg-foreground' : 'bg-muted-foreground/30'
+                i === currentPage ? 'bg-background' : 'bg-background/30'
               }`}
             />
           ))}
