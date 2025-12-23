@@ -1,61 +1,117 @@
-import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  useMediaQuery
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { useTheme } from "@mui/material/styles";
 
-const Header = () => {
+const navItems = [
+  "How it works",
+  "All apps",
+  "Pricing",
+  "For Teams",
+  "Blog",
+  "Podcast"
+];
+
+export default function Navbar() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery("(max-width:900px)");
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md">
-      <div className="container mx-auto px-6 py-3">
-        <div className="flex items-center justify-between">
+    <>
+      <AppBar position="static" sx={{ backgroundColor: "#26262B" }}>
+        <Toolbar sx={{ justifyContent: "space-between", minHeight: "unset !important", marginTop: "17px !important", px: "40px !important" }}>
+
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-coral rounded-lg flex items-center justify-center">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-foreground">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2"/>
-              </svg>
+          <img src="/Images/logo.svg" alt="" />
+
+
+          {!isMobile && (
+            <div
+              style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
+            >
+
+
+              {navItems.map((item) => (
+                <p
+                  key={item}
+                  style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", fontSize: "14px" }}
+                >
+                  {item}
+                </p>
+              ))}
+              {!isMobile ? (
+                <div
+                  style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
+                >
+                  <img src="/Images/line.svg" alt="" />
+                  <img src="/Images/flag.svg" alt="" />
+                  <p
+                    style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", fontSize: "14px" }}
+
+                  >Sign in</p>
+                  <button
+                    style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", width: "101.3px", height: "33.29px", borderRadius: "6px", border: "1px solid #FFFFFF", fontSize: "14px" }}
+
+                  >Try free</button>
+                </div>
+
+              ) : (
+                <IconButton color="inherit" onClick={() => setOpen(true)}>
+                  <MenuIcon />
+                </IconButton>
+              )}
+
             </div>
-            <span className="text-lg font-bold text-foreground">Setapp</span>
-          </div>
+          )}
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-              How it works
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-              All Apps
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-              Pricing
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-              For Teams
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-              Blog
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-xs">
-              Podcast
-            </a>
-          </nav>
+          {/* Right Side */}
 
-          {/* Actions */}
-          <div className="flex items-center gap-3">
-            <a href="#" className="hidden md:block text-muted-foreground hover:text-foreground transition-colors text-xs">
-              My Mac
-            </a>
-            <Button variant="hero" size="sm" className="hidden md:flex text-xs h-8 px-4">
-              Try Free
-            </Button>
-            <Button variant="ghost" size="icon" className="md:hidden h-8 w-8">
-              <Menu className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </div>
-    </header>
+        </Toolbar>
+      </AppBar >
+
+      {/* Mobile Drawer */}
+      < Drawer anchor="right" open={open} onClose={() => setOpen(false)
+      }>
+        <Box sx={{ width: 250 }}>
+          <List>
+            {navItems.map((item) => (
+              <ListItem key={item} disablePadding>
+                <ListItemButton>
+                  <ListItemText primary={item} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemText primary="Sign in" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <Button
+                fullWidth
+                variant="contained"
+                sx={{ borderRadius: "20px", mt: 1 }}
+              >
+                Try free
+              </Button>
+            </ListItem>
+          </List>
+        </Box>
+      </Drawer >
+    </>
   );
-};
-
-export default Header;
+}
