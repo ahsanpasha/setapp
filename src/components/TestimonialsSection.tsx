@@ -12,6 +12,7 @@ best and the most cost-effective way of having apps on Mac.`,
       name: "Arash Pourhabibi",
       username: "@ArashPourhabibi",
       image: "/Images/twitter.svg",
+      color: "#71719A",
     },
     {
       text: `My favorites ❤️ from
@@ -22,6 +23,7 @@ Publisher.`,
       name: "Mauricio Sanchez",
       username: "@m741s",
       image: "/Images/insta.svg",
+      color: "#D9AE89",
     },
     {
       text: `For those of you that
@@ -33,6 +35,7 @@ from Setapp!`,
       name: "Meredith Sweet",
       username: "@meredith.sweet.silberstein",
       image: "/Images/fb.svg",
+      color: "#765070",
     },
   ];
 
@@ -85,7 +88,10 @@ from Setapp!`,
       <div className="lg:hidden">
         <div className="w-full rounded-[15px] p-[7px] bg-[#F5F5F5]">
           {/* Quote Box */}
-          <div className="rounded-[8px] min-h-[250px] sm:min-h-[280px] md:min-h-[299.48px] bg-[#71719A] p-5 sm:p-6 md:p-[22px] md:pb-[38.98px]">
+          <div
+            className="rounded-[8px] min-h-[250px] sm:min-h-[280px] md:min-h-[299.48px] p-5 sm:p-6 md:p-[22px] md:pb-[38.98px]"
+            style={{ backgroundColor: testimonials[currentPage].color }}
+          >
             <p className="font-['Avenir'] font-medium text-lg sm:text-xl md:text-[26px] leading-relaxed sm:leading-loose md:leading-[36.92px] text-white whitespace-pre-line">
               {testimonials[currentPage].text}
             </p>
@@ -119,7 +125,10 @@ from Setapp!`,
             className="w-full rounded-[15px] p-[7px] bg-[#F5F5F5]"
           >
             {/* Quote Box */}
-            <div className="rounded-[8px] h-[299.48px] bg-[#71719A] p-[22px] pb-[38.98px] pl-[22px]">
+            <div
+              className="rounded-[8px] h-[299.48px] p-[22px] pb-[38.98px] pl-[22px]"
+              style={{ backgroundColor: item.color }}
+            >
               <p className="font-['Avenir'] font-medium text-[26px] leading-[36.92px] text-white whitespace-pre-line">
                 {item.text}
               </p>
