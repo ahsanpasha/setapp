@@ -29,7 +29,7 @@ const JourneySection = () => {
             <img
               src="/Images/play.svg"
               alt="Play"
-              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[74px] lg:h-[74px] object-contain mt-8 sm:mt-12 md:mt-16 lg:mt-[131px]"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-[74px] lg:h-[74px] object-contain mt-8 sm:mt-12 md:mt-16 lg:mt-[131px] hover:scale-110 active:scale-95 transition-transform duration-200 cursor-pointer"
             />
           </div>
 
@@ -38,12 +38,12 @@ const JourneySection = () => {
             <img
               src="/Images/arooooow.svg"
               alt="Previous"
-              className="w-[12px] h-[20px] sm:w-[10px] sm:h-[18px] md:w-[12px] md:h-[20px] lg:w-[14px] lg:h-[24px] object-contain cursor-pointer hover:opacity-100 opacity-70 transition-opacity"
+              className="w-[12px] h-[20px] sm:w-[10px] sm:h-[18px] md:w-[12px] md:h-[20px] lg:w-[14px] lg:h-[24px] object-contain cursor-pointer hover:opacity-100 opacity-70 hover:scale-125 active:scale-95 transition-all duration-200"
             />
             <img
               src="/Images/arooooow1.svg"
               alt="Next"
-              className="w-[12px] h-[20px] sm:w-[10px] sm:h-[18px] md:w-[12px] md:h-[20px] lg:w-[14px] lg:h-[24px] object-contain cursor-pointer hover:opacity-100 opacity-70 transition-opacity"
+              className="w-[12px] h-[20px] sm:w-[10px] sm:h-[18px] md:w-[12px] md:h-[20px] lg:w-[14px] lg:h-[24px] object-contain cursor-pointer hover:opacity-100 opacity-70 hover:scale-125 active:scale-95 transition-all duration-200"
             />
           </div>
 

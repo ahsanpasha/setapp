@@ -20,19 +20,19 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-[20px] mt-8 sm:mt-10 md:mt-[48px] mb-6 sm:mb-[27.5px] w-full sm:w-auto px-4 sm:px-0">
           <button
-            className="h-[52px] bg-[#fff] rounded-[6px] font-[Avenir] text-[#26262B] font-normal text-[14px] sm:text-[16px] px-4 sm:px-6 flex items-center justify-center hover:opacity-90 transition whitespace-nowrap"
+            className="h-[52px] bg-[#fff] rounded-[6px] font-[Avenir] text-[#26262B] font-normal text-[14px] sm:text-[16px] px-4 sm:px-6 flex items-center justify-center hover:opacity-90 hover:scale-105 active:scale-95 transition-all duration-200 whitespace-nowrap"
           >
             Try free for 7 days
           </button>
 
           <div className="flex flex-row gap-3 sm:gap-[20px]">
             <button
-              className="h-[52px] flex-1 sm:flex-none bg-[#fff] rounded-[6px] font-[Avenir-Next] font-normal text-[16px] px-4 sm:px-6 flex items-center justify-center hover:opacity-90 transition"
+              className="h-[52px] flex-1 sm:flex-none bg-[#fff] rounded-[6px] font-[Avenir-Next] font-normal text-[16px] px-4 sm:px-6 flex items-center justify-center hover:opacity-90 hover:scale-105 active:scale-95 transition-all duration-200"
             >
               <img src="/Images/apple.svg" alt="Apple" className="w-6 h-6" />
             </button>
             <button
-              className="h-[52px] flex-1 sm:flex-none bg-[#fff] rounded-[6px] font-[Avenir-Next] font-normal text-[16px] px-4 sm:px-6 flex items-center justify-center hover:opacity-90 transition"
+              className="h-[52px] flex-1 sm:flex-none bg-[#fff] rounded-[6px] font-[Avenir-Next] font-normal text-[16px] px-4 sm:px-6 flex items-center justify-center hover:opacity-90 hover:scale-105 active:scale-95 transition-all duration-200"
             >
               <img src="/Images/playstore.svg" alt="Play Store" className="w-6 h-6" />
             </button>

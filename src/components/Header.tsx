@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Button,
   IconButton,
   Box,
@@ -27,91 +26,151 @@ const navItems = [
 
 export default function Navbar() {
   const theme = useTheme();
-  const isMobile = useMediaQuery("(max-width:900px)");
+  const isMobile = useMediaQuery("(max-width:1000px)");
   const [open, setOpen] = useState(false);
+
+  const drawerTextStyle = {
+    color: "#ccc",
+    fontFamily: "Avenir",
+    fontSize: "14px",
+    cursor: "pointer",
+  };
+
+  const drawerTextHover = {
+    "&:hover": {
+      color: "#fff",
+      transition: "color 0.2s",
+    },
+  };
 
   return (
     <>
       <AppBar position="static" sx={{ backgroundColor: "#26262B" }}>
-        <Toolbar sx={{ justifyContent: "space-between", minHeight: "unset !important", marginTop: "17px !important", px: "40px !important" }}>
-
+        <Toolbar
+          sx={{
+            justifyContent: "space-between",
+            minHeight: "unset !important",
+            marginTop: "17px !important",
+            px: { xs: "16px", sm: "40px" }
+          }}
+        >
           {/* Logo */}
-          <img src="/Images/logo.svg" alt="" />
+          <img src="/Images/logo.svg" alt="Logo" style={{ height: "40px" }} />
 
-
+          {/* Desktop Nav */}
           {!isMobile && (
-            <div
-              style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
-            >
-
-
+            <Box sx={{ display: "flex", alignItems: "center", gap: "30px" }}>
               {navItems.map((item) => (
                 <p
                   key={item}
-                  style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", fontSize: "14px" }}
+                  className="cursor-pointer text-[#ccc] font-['Avenir'] text-[14px] hover:text-white transition-colors duration-200"
                 >
                   {item}
                 </p>
               ))}
-              {!isMobile ? (
-                <div
-                  style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
+
+              <Box sx={{ display: "flex", alignItems: "center", gap: "30px" }}>
+                <img src="/Images/line.svg" alt="" />
+                <img src="/Images/flag.svg" alt="" />
+                <p
+                  style={{
+                    cursor: "pointer",
+                    color: "#ccc",
+                    fontFamily: "Avenir",
+                    fontSize: "14px",
+                    margin: 0
+                  }}
                 >
-                  <img src="/Images/line.svg" alt="" />
-                  <img src="/Images/flag.svg" alt="" />
-                  <p
-                    style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", fontSize: "14px" }}
-
-                  >Sign in</p>
-                  <button
-                    style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", width: "101.3px", height: "33.29px", borderRadius: "6px", border: "1px solid #FFFFFF", fontSize: "14px" }}
-
-                  >Try free</button>
-                </div>
-
-              ) : (
-                <IconButton color="inherit" onClick={() => setOpen(true)}>
-                  <MenuIcon />
-                </IconButton>
-              )}
-
-            </div>
+                  Sign in
+                </p>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    color: "#ccc",
+                    borderColor: "#fff",
+                    borderRadius: "6px",
+                    width: "101px",
+                    height: "33px",
+                    textTransform: "none",
+                    fontFamily: "Avenir",
+                    fontSize: "14px"
+                  }}
+                >
+                  Try free
+                </Button>
+              </Box>
+            </Box>
           )}
 
-          {/* Right Side */}
-
+          {/* Mobile Hamburger */}
+          {isMobile && (
+            <IconButton
+              edge="end"
+              color="inherit"
+              onClick={() => setOpen(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+          )}
         </Toolbar>
-      </AppBar >
+      </AppBar>
 
       {/* Mobile Drawer */}
-      < Drawer anchor="right" open={open} onClose={() => setOpen(false)
-      }>
-        <Box sx={{ width: 250 }}>
-          <List>
-            {navItems.map((item) => (
-              <ListItem key={item} disablePadding>
-                <ListItemButton>
-                  <ListItemText primary={item} />
-                </ListItemButton>
-              </ListItem>
-            ))}
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemText primary="Sign in" />
+      <Drawer
+        anchor="right"
+        open={open}
+        onClose={() => setOpen(false)}
+        PaperProps={{
+          sx: { backgroundColor: "#26262B", color: "#ccc", width: 280, p: 2 },
+        }}
+      >
+        <List>
+          {navItems.map((item) => (
+            <ListItem key={item} disablePadding>
+              <ListItemButton sx={{ ...drawerTextHover }}>
+                <ListItemText
+                  primary={item}
+                  primaryTypographyProps={{
+                    sx: { ...drawerTextStyle },
+                  }}
+                />
               </ListItemButton>
             </ListItem>
-            <ListItem>
-              <Button
-                fullWidth
-                variant="contained"
-                sx={{ borderRadius: "20px", mt: 1 }}
-              >
-                Try free
-              </Button>
-            </ListItem>
-          </List>
-        </Box>
-      </Drawer >
+          ))}
+          <ListItem disablePadding>
+            <ListItemButton sx={{ ...drawerTextHover }}>
+              <ListItemText
+                primary="Sign in"
+                primaryTypographyProps={{
+                  sx: { ...drawerTextStyle },
+                }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <Button
+              fullWidth
+              variant="outlined"
+              sx={{
+                borderRadius: "6px",
+                borderColor: "#fff",
+                color: "#ccc",
+                mt: 1,
+                textTransform: "none",
+                fontFamily: "Avenir",
+                fontSize: "14px",
+                "&:hover": {
+                  backgroundColor: "#fff",
+                  color: "#26262B",
+                  borderColor: "#fff",
+                },
+              }}
+            >
+              Try free
+            </Button>
+          </ListItem>
+        </List>
+      </Drawer>
     </>
   );
 }

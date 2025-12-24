@@ -52,10 +52,10 @@ from Setapp!`,
             powers you up.
           </p>
           <div className="flex flex-row gap-2 sm:gap-3 md:gap-[10px]">
-            <img src="/Images/fbb.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain" alt="Facebook" />
-            <img src="/Images/twitterr.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain" alt="Twitter" />
-            <img src="/Images/instaa.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain" alt="Instagram" />
-            <img src="/Images/youtubee.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain" alt="YouTube" />
+            <img src="/Images/fbb.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain hover:scale-110 hover:brightness-110 transition-all duration-200 cursor-pointer" alt="Facebook" />
+            <img src="/Images/twitterr.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain hover:scale-110 hover:brightness-110 transition-all duration-200 cursor-pointer" alt="Twitter" />
+            <img src="/Images/instaa.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain hover:scale-110 hover:brightness-110 transition-all duration-200 cursor-pointer" alt="Instagram" />
+            <img src="/Images/youtubee.svg" className="h-8 w-8 sm:h-10 sm:w-10 md:h-[48px] md:w-[48px] object-contain hover:scale-110 hover:brightness-110 transition-all duration-200 cursor-pointer" alt="YouTube" />
           </div>
         </div>
       </div>
@@ -66,13 +66,13 @@ from Setapp!`,
           <img
             src="/Images/leftchev.svg"
             onClick={prevPage}
-            className="w-[10px] h-[20px] sm:w-[12px] sm:h-[24px] md:w-[14px] md:h-[28px] lg:w-[10px] lg:h-[20px] cursor-pointer hover:opacity-70 transition-opacity object-contain"
+            className="w-[10px] h-[20px] sm:w-[12px] sm:h-[24px] md:w-[14px] md:h-[28px] lg:w-[10px] lg:h-[20px] cursor-pointer hover:opacity-100 hover:scale-125 active:scale-95 transition-all duration-200 object-contain"
             alt="Previous"
           />
           <img
             src="/Images/rightchev.svg"
             onClick={nextPage}
-            className="w-[10px] h-[20px] sm:w-[12px] sm:h-[24px] md:w-[14px] md:h-[28px] lg:w-[10px] lg:h-[20px] cursor-pointer hover:opacity-70 transition-opacity object-contain"
+            className="w-[10px] h-[20px] sm:w-[12px] sm:h-[24px] md:w-[14px] md:h-[28px] lg:w-[10px] lg:h-[20px] cursor-pointer hover:opacity-100 hover:scale-125 active:scale-95 transition-all duration-200 object-contain"
             alt="Next"
           />
         </div>
@@ -139,7 +139,7 @@ from Setapp!`,
               <img
                 src={item.image}
                 alt="twitter"
-                className="w-[20px] h-[20px]"
+                className="w-[20px] h-[20px] hover:scale-110 transition-transform duration-200 cursor-pointer"
               />
             </div>
           </div>

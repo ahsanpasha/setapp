@@ -53,6 +53,7 @@ const Footer = () => {
             rounded-r-[6px]
             flex items-center justify-center
             flex-shrink-0
+            hover:bg-gray-200 active:scale-95 transition-all duration-200
           "
             >
               <img
@@ -76,7 +77,7 @@ const Footer = () => {
                   <li key={link}>
                     <a
                       href="#"
-                      className="font-['Avenir'] font-normal text-[16px] leading-[32px] text-white hover:opacity-80 transition"
+                      className="font-['Avenir'] font-normal text-[16px] leading-[32px] text-white hover:text-[#DF96AE] hover:translate-x-1 transition-all duration-200 inline-block"
                     >
                       {link}
                     </a>
@@ -138,20 +139,20 @@ const Footer = () => {
 
           {/* RIGHT ICONS */}
           <div className="flex items-center gap-[10px]">
-            <img src="/Images/icon1.svg" alt="icon" />
-            <img src="/Images/icon2.svg" alt="icon" />
-            <img src="/Images/icon3.svg" alt="icon" />
-            <img src="/Images/icon4.svg" alt="icon" />
+            <img src="/Images/icon1.svg" alt="icon" className="hover:scale-110 active:scale-95 transition-transform duration-200 cursor-pointer" />
+            <img src="/Images/icon2.svg" alt="icon" className="hover:scale-110 active:scale-95 transition-transform duration-200 cursor-pointer" />
+            <img src="/Images/icon3.svg" alt="icon" className="hover:scale-110 active:scale-95 transition-transform duration-200 cursor-pointer" />
+            <img src="/Images/icon4.svg" alt="icon" className="hover:scale-110 active:scale-95 transition-transform duration-200 cursor-pointer" />
           </div>
 
         </div>
       </div>
 
       <div className="mt-[19px] flex gap-[12.67px]">
-        <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-[#969799]">
+        <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-[#969799] hover:text-white cursor-pointer transition-colors duration-200">
           Terms of Use
         </p>
-        <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-[#969799]">
+        <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-[#969799] hover:text-white cursor-pointer transition-colors duration-200">
           Privacy Policy
         </p>
       </div>

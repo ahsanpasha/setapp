@@ -36,7 +36,7 @@ const CTASection = () => {
                 font-['Avenir'] font-normal text-[16px] leading-[24px] tracking-[1px]
                 text-white bg-[#26262B]
                 text-center
-                hover:bg-[#1f1f1f] transition-colors
+                hover:bg-[#1f1f1f] hover:scale-105 active:scale-95 transition-all duration-200
               "
             >
               Get started now
@@ -52,7 +52,7 @@ const CTASection = () => {
                 bg-transparent
                 border border-[#26262B]
                 text-center
-                hover:bg-[#26262B] hover:text-white transition-colors
+                hover:bg-[#26262B] hover:text-white hover:scale-105 active:scale-95 transition-all duration-200
               "
             >
               More about Setapp

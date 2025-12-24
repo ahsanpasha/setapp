@@ -17,7 +17,7 @@ const FeaturesSection = () => {
       </div>
 
 
-      <div className="bg-[#DF96AE] rounded-[20px] pt-8 sm:pt-12 md:pt-[60px] overflow-hidden">
+      <div className="bg-[#DF96AE] rounded-[20px] pt-8 sm:pt-12 md:pt-[60px] overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
 
         <div className="px-5 sm:px-8 md:px-12 lg:px-[60px] flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-[32px]">
           <img src="/Images/com.svg" alt="" className="w-12 h-12 sm:w-16 sm:h-16 md:w-auto md:h-auto flex-shrink-0" />
@@ -40,7 +40,7 @@ const FeaturesSection = () => {
 
 
       <div className="w-full flex flex-col lg:flex-row items-stretch gap-4 sm:gap-5 md:gap-[20px] mt-4 sm:mt-5 md:mt-[20px]">
-        <div className="w-full lg:w-[50%] bg-[#F4F0E4] rounded-[20px] overflow-hidden">
+        <div className="w-full lg:w-[50%] bg-[#F4F0E4] rounded-[20px] overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
           <img
             src="/Images/coderunner@2x.png.png"
             alt="Keep your Mac clean"
@@ -66,7 +66,7 @@ const FeaturesSection = () => {
 
 
         </div>
-        <div className="w-full lg:w-[50%] rounded-[20px] bg-[#384C75] pt-8 sm:pt-12 md:pt-[60px] overflow-hidden">
+        <div className="w-full lg:w-[50%] rounded-[20px] bg-[#384C75] pt-8 sm:pt-12 md:pt-[60px] overflow-hidden hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer">
           <div className="flex flex-col px-5 sm:px-8 md:px-12 lg:px-[60px] pb-8 sm:pb-10 md:pb-[52.46px]">
             <img
               src="/Images/circle.svg"
@@ -91,11 +91,11 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row items-center justify-center mt-12 sm:mt-16 md:mt-20 lg:mt-[100px] gap-2 sm:gap-[11px]">
+      <div className="flex flex-col sm:flex-row items-center justify-center mt-12 sm:mt-16 md:mt-20 lg:mt-[100px] gap-2 sm:gap-[11px] group cursor-pointer">
         <img
           src="/Images/arrow.svg"
           alt=""
-          className="w-auto h-auto"
+          className="w-auto h-auto group-hover:translate-x-2 transition-transform duration-300"
         />
 
         <p className="font-['Avenir'] font-medium text-base sm:text-lg md:text-[20px] leading-relaxed md:leading-[30px] tracking-[1.6px] text-center text-[#ffffff]">
