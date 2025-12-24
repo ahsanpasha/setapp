@@ -128,7 +128,7 @@ from Setapp!`,
             {/* Footer */}
             <div className="flex items-center justify-between px-[22px] pb-[13px] pt-[38.5px]">
               <div>
-                <p className="font-['Avenir-Bold'] font-semibold text-[18px] text-[#26262B]">
+                <p className="font-['Avenir'] font-semibold text-[18px] text-[#26262B]">
                   {item.name}
                 </p>
                 <p className="font-['Avenir'] text-[14px] text-[#9F9F9F]">

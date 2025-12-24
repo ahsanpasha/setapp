@@ -12,11 +12,12 @@ const JourneySection = () => {
 
         {/* Full-width Card with background image */}
         <div
-          className="w-full rounded-[12px] sm:rounded-[16px] md:rounded-[20px] z-10 bg-cover bg-center bg-no-repeat flex flex-col md:flex-row justify-between px-5 sm:px-8 md:px-10 lg:px-[46px] xl:px-[91px] pt-8 sm:pt-12 md:pt-16 lg:pt-[64.8px] pb-12 sm:pb-16 md:pb-20 lg:pb-[142px]"
+          className="w-full rounded-[12px] sm:rounded-[16px] md:rounded-[20px] z-10 bg-cover bg-center bg-no-repeat flex flex-col md:flex-row justify-between items-start px-5 sm:px-8 md:px-10 lg:px-[46px] xl:px-[91px] pt-8 sm:pt-12 md:pt-16 lg:pt-[64.8px] pb-12 sm:pb-16 md:pb-20 lg:pb-[142px]"
           style={{
             backgroundImage: "url('/Images/Section.png')",
           }}
         >
+
 
           {/* First Div: Text + Play Image */}
           <div className="flex flex-col w-full max-w-[280px] min-[350px]:max-w-[320px] min-[400px]:max-w-[360px] min-[450px]:max-w-[400px] min-[500px]:max-w-[440px] min-[550px]:max-w-[480px] min-[600px]:max-w-[500px] min-[700px]:max-w-[520px] lg:max-w-[546px]">
