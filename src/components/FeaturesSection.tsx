@@ -114,7 +114,7 @@ const FeaturesSection = () => {
         </p>
       </div>
 
-      <hr className="w-full h-[1px] bg-[#E5E5E5]" />
+      <hr className="w-full h-[1.5px] bg-[#E5E5E5]" />
     </section>
 
   );
