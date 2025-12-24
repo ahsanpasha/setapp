@@ -33,20 +33,18 @@ export default function Navbar() {
   return (
     <>
       <AppBar position="static" sx={{ backgroundColor: "#26262B" }}>
-        <Toolbar sx={{
-          justifyContent: "space-between",
-          minHeight: "unset !important",
-          marginTop: { xs: "10px", sm: "17px" },
-          px: { xs: "16px", sm: "24px", md: "40px" }
-        }}>
+        <Toolbar sx={{ justifyContent: "space-between", minHeight: "unset !important", marginTop: "17px !important", px: "40px !important" }}>
 
           {/* Logo */}
-          <img src="/Images/logo.svg" alt="" style={{ maxWidth: "120px", height: "auto" }} />
+          <img src="/Images/logo.svg" alt="" />
+
 
           {!isMobile && (
             <div
               style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
             >
+
+
               {navItems.map((item) => (
                 <p
                   key={item}
@@ -55,32 +53,39 @@ export default function Navbar() {
                   {item}
                 </p>
               ))}
-              <div
-                style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
-              >
-                <img src="/Images/line.svg" alt="" />
-                <img src="/Images/flag.svg" alt="" />
-                <p
-                  style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", fontSize: "14px" }}
-                >Sign in</p>
-                <button
-                  style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", width: "101.3px", height: "33.29px", borderRadius: "6px", border: "1px solid #FFFFFF", fontSize: "14px" }}
-                >Try free</button>
-              </div>
+              {!isMobile ? (
+                <div
+                  style={{ display: "flex", flexDirection: "row", alignItems: "center", gap: "30px" }}
+                >
+                  <img src="/Images/line.svg" alt="" />
+                  <img src="/Images/flag.svg" alt="" />
+                  <p
+                    style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", fontSize: "14px" }}
+
+                  >Sign in</p>
+                  <button
+                    style={{ cursor: "pointer", color: "#ccc", fontFamily: "Avenir", width: "101.3px", height: "33.29px", borderRadius: "6px", border: "1px solid #FFFFFF", fontSize: "14px" }}
+
+                  >Try free</button>
+                </div>
+
+              ) : (
+                <IconButton color="inherit" onClick={() => setOpen(true)}>
+                  <MenuIcon />
+                </IconButton>
+              )}
+
             </div>
           )}
 
-          {isMobile && (
-            <IconButton color="inherit" onClick={() => setOpen(true)}>
-              <MenuIcon />
-            </IconButton>
-          )}
+          {/* Right Side */}
 
         </Toolbar>
-      </AppBar>
+      </AppBar >
 
       {/* Mobile Drawer */}
-      <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
+      < Drawer anchor="right" open={open} onClose={() => setOpen(false)
+      }>
         <Box sx={{ width: 250 }}>
           <List>
             {navItems.map((item) => (
@@ -106,7 +111,7 @@ export default function Navbar() {
             </ListItem>
           </List>
         </Box>
-      </Drawer>
+      </Drawer >
     </>
   );
 }

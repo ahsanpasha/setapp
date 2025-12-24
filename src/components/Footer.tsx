@@ -8,54 +8,76 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-background border-t border-border py-8 sm:py-10 md:py-12 px-4 sm:px-6">
-      <div className="container mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-10">
-          {/* Logo and newsletter */}
-          <div className="sm:col-span-2 lg:col-span-2">
-            <div className="flex items-center gap-2 mb-3 sm:mb-4">
-              <div className="w-6 h-6 sm:w-7 sm:h-7 bg-coral rounded-lg flex items-center justify-center">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-foreground sm:w-4 sm:h-4">
-                  <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor" />
-                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" />
-                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" />
-                </svg>
-              </div>
-              <span className="text-base sm:text-lg font-bold text-foreground">Setapp</span>
-            </div>
+    <footer className="pt-[360px] bg-[#2B2D32] border-t border-border px-[30px] sm:px-6 py-8 sm:py-10 ">
 
-            <p className="text-muted-foreground text-[10px] mb-2 sm:mb-3 max-w-xs">
-              All prices are in USD. Unsubscribe at any time.
-            </p>
+      <div className="flex flex-col lg:flex-row lg:justify-between gap-10">
 
-            {/* Newsletter signup */}
-            <div className="flex gap-2 mb-3 sm:mb-4 max-w-full sm:max-w-xs">
-              <input
-                type="email"
-                placeholder="Enter email"
-                className="flex-1 bg-secondary border border-border rounded-full px-3 py-1.5 text-xs text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+
+        <div className="max-w-md">
+          <img src="/Images/footerlogo.svg" alt="footer logo" />
+
+          <p className="mt-[78px] max-w-xs text-white font-['Avenir'] font-normal text-[16px] leading-[28.48px]">
+            All prices are in USD. Unsubscribe at any time 🧡
+          </p>
+
+
+          <div className="flex mt-[24px] w-full max-w-[442px]">
+
+            <input
+              type="email"
+              placeholder="Enter email"
+              className="
+            w-[388px]
+            h-[50.23px]
+            bg-[#404547]
+            px-[12px]
+            pt-[14px]
+            pb-[14.23px]
+            font-['Avenir']
+            font-normal
+            text-[16px]
+            leading-[100%]
+            text-white
+            placeholder:text-[#9D9CA2]
+            rounded-l-[6px]
+            focus:outline-none
+          "
+            />
+
+            <button
+              className="
+            w-[54px]
+            h-[50.23px]
+            bg-white
+            border border-white
+            rounded-r-[6px]
+            flex items-center justify-center
+            flex-shrink-0
+          "
+            >
+              <img
+                src="/Images/arrowwnew.svg"
+                alt="submit"
+                className="w-[16px] h-[16px]"
               />
-              <button className="w-8 h-8 rounded-full bg-foreground flex items-center justify-center hover:bg-foreground/90 transition-colors flex-shrink-0">
-                <span className="text-background text-sm">→</span>
-              </button>
-            </div>
-
-            {/* Platform links */}
-            <div className="space-y-1">
-              <a href="#" className="block text-muted-foreground hover:text-foreground text-[10px] transition-colors">
-                📱 Setapp Mobile
-              </a>
-            </div>
+            </button>
           </div>
+        </div>
 
-          {/* Link columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h4 className="text-foreground font-semibold text-xs mb-2 sm:mb-3">{title}</h4>
-              <ul className="space-y-1 sm:space-y-1.5">
+              <h4 className="font-['Avenir'] font-normal text-[16px] leading-[32px] text-white">
+                {title}
+              </h4>
+
+              <ul className="space-y-[0.5px]">
                 {links.map((link) => (
                   <li key={link}>
-                    <a href="#" className="text-muted-foreground hover:text-foreground text-[10px] transition-colors">
+                    <a
+                      href="#"
+                      className="font-['Avenir'] font-normal text-[16px] leading-[32px] text-white hover:opacity-80 transition"
+                    >
                       {link}
                     </a>
                   </li>
@@ -65,46 +87,79 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between pt-4 sm:pt-6 border-t border-border gap-3 sm:gap-4">
-          <p className="text-muted-foreground text-[10px] text-center md:text-left">
-            © 2024 Setapp Limited, a MacPaw company. All rights reserved.
-          </p>
+      </div>
 
-          <div className="flex items-center gap-2 sm:gap-3">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Twitter className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Facebook className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Youtube className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Instagram className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-              <Linkedin className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            </a>
+      <div className="flex items-center justify-between mt-[41.24px]">
+
+        <div className="flex items-center">
+
+          <div className="flex items-center justify-center w-[41px] h-[26px] font-['Arial'] font-bold text-[11px] leading-[26px] uppercase bg-[#969799]">
+            DMCA
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="text-muted-foreground text-[10px]">English ▾</span>
+          <div className="flex items-center justify-center w-[83.44px] h-[26px] font-['Arial'] font-bold text-[11px] leading-[26px] uppercase bg-[#404547]">
+            Protected
           </div>
+
         </div>
 
-        {/* Legal links */}
-        <div className="flex flex-wrap gap-3 sm:gap-4 mt-2 sm:mt-3 justify-center md:justify-start">
-          <a href="#" className="text-muted-foreground hover:text-foreground text-[10px] transition-colors">
-            Terms of Service
-          </a>
-          <a href="#" className="text-muted-foreground hover:text-foreground text-[10px] transition-colors">
-            Privacy Policy
-          </a>
+
+        <div className="flex items-center gap-[10px]">
+          <img
+            src="/Images/flagnew.svg"
+            alt="English"
+            className="w-[20px] h-[14px] object-cover"
+          />
+          <span className="font-['Arial'] font-normal text-[16px] text-white">
+            English
+          </span>
+          <img
+            src="/Images/arrowdown.svg"
+            alt="English"
+            className="w-[10px] h-[10px]"
+          />
+        </div>
+
+      </div>
+
+      <div className="mt-[40px]">
+
+        <div className="border-t border-[#E5E5E5]" />
+
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mt-6 gap-6">
+
+          {/* LEFT TEXT */}
+          <div>
+            <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-white">
+              © 2023 Setapp Limited, 9 Tallow Street, Youghal, Co. Cork, P36YE14, Ireland.
+              Reg. 584165. VAT ID: IE3425001BH
+            </p>
+          </div> {/* This was the missing opening tag for the divider div */}
+
+          {/* RIGHT ICONS */}
+          <div className="flex items-center gap-[10px]">
+            <img src="/Images/icon1.svg" alt="icon" />
+            <img src="/Images/icon2.svg" alt="icon" />
+            <img src="/Images/icon3.svg" alt="icon" />
+            <img src="/Images/icon4.svg" alt="icon" />
+          </div>
+
         </div>
       </div>
+
+      <div className="mt-[19px] flex gap-[12.67px]">
+        <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-[#969799]">
+          Terms of Use
+        </p>
+        <p className="font-['Avenir'] font-normal text-[12px] leading-[21.36px] text-[#969799]">
+          Privacy Policy
+        </p>
+      </div>
+
+
+
     </footer>
+
   );
 };
 
