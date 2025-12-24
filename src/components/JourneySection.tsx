@@ -5,7 +5,7 @@ const JourneySection = () => {
     <section className="relative bg-[#FEFEFE]">
 
       {/* Upper Half Dark Background */}
-      <div className="absolute top-0 left-0 w-full h-[50%] bg-[#2B2D32]"></div>
+      <div className="absolute top-0 left-0 w-full h-[50%] bg-[#26262B]"></div>
 
       {/* Content Container */}
       <div className="relative px-5 sm:px-8 md:px-10 lg:px-14 xl:px-[55px] py-8 sm:py-10 md:py-12 lg:py-14 flex justify-center">
