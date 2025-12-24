@@ -6,7 +6,7 @@ const FeaturesSection = () => {
       <hr className="w-full h-[1px] bg-[#E5E5E5]" />
 
       <div className="flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-8 mb-12 sm:mb-16 md:mb-[88px] mt-12 sm:mt-16 md:mt-[101px]">
-        <p className="font-['Avenir-Bold'] text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-[36px] leading-tight md:leading-[51.84px] tracking-[1px]">
+        <p className="font-['Avenir'] text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-[36px] leading-tight md:leading-[51.84px] tracking-[1px]">
           What you get on Setapp.
         </p>
 
@@ -22,7 +22,7 @@ const FeaturesSection = () => {
         <div className="px-5 sm:px-8 md:px-12 lg:px-[60px] flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 md:gap-[32px]">
           <img src="/Images/com.svg" alt="" className="w-12 h-12 sm:w-16 sm:h-16 md:w-auto md:h-auto flex-shrink-0" />
           <div className="flex flex-col justify-center">
-            <p className="font-[Avenir-Bold] font-semibold text-xl sm:text-2xl md:text-[26px] leading-tight md:leading-[40.04px] text-[#26262B]">
+            <p className="font-[Avenir] font-semibold text-xl sm:text-2xl md:text-[26px] leading-tight md:leading-[40.04px] text-[#26262B]">
               Keep your Mac clean
             </p>
 
@@ -54,7 +54,7 @@ const FeaturesSection = () => {
               className="w-12 h-12 sm:w-16 sm:h-16 md:w-[68px] md:h-[68px] mb-3 sm:mb-4 md:mb-[19px] object-contain"
             />
 
-            <p className="font-['Avenir-Bold'] font-semibold text-xl sm:text-2xl md:text-[26px] leading-tight md:leading-[40.04px] text-[#26262B]">
+            <p className="font-['Avenir'] font-semibold text-xl sm:text-2xl md:text-[26px] leading-tight md:leading-[40.04px] text-[#26262B]">
               Write code
             </p>
 
@@ -74,7 +74,7 @@ const FeaturesSection = () => {
               className="w-12 h-12 sm:w-16 sm:h-16 md:w-[68px] md:h-[68px] mb-3 sm:mb-4 md:mb-[19px] object-contain"
             />
 
-            <p className="font-['Avenir-Bold'] font-semibold text-xl sm:text-2xl md:text-[26px] leading-tight md:leading-[40.04px] text-white">
+            <p className="font-['Avenir'] font-semibold text-xl sm:text-2xl md:text-[26px] leading-tight md:leading-[40.04px] text-white">
               Join meetings in a click
             </p>
 
@@ -104,7 +104,7 @@ const FeaturesSection = () => {
       </div>
 
       <div className="flex flex-col lg:flex-row lg:justify-between gap-6 lg:gap-8 mb-12 sm:mb-16 md:mb-[89px] mt-12 sm:mt-16 md:mt-[88px]">
-        <p className="font-['Avenir-Bold'] text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-[36px] leading-tight md:leading-[51.84px] tracking-[1px]">
+        <p className="font-['Avenir'] text-[#FFFFFF] font-semibold text-2xl sm:text-3xl md:text-[36px] leading-tight md:leading-[51.84px] tracking-[1px]">
           Your Setapp journey.
         </p>
 

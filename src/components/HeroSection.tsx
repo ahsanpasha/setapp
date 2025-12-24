@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="flex flex-col items-center justify-center max-w-full">
         <img src="/Images/biglogo.svg" alt="" className="w-20 sm:w-24 md:w-32 lg:w-auto mb-6 sm:mb-8" />
 
-        <p className="font-[Avenir-Bold] font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] leading-tight sm:leading-tight md:leading-[67.84px] tracking-[0.5px] sm:tracking-[1px] text-center text-white">
+        <p className="font-[Avenir] font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] leading-tight sm:leading-tight md:leading-[67.84px] tracking-[0.5px] sm:tracking-[1px] text-center text-white">
           Dozens of apps.
           <br />
           One subscription.

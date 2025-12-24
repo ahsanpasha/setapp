@@ -94,7 +94,7 @@ from Setapp!`,
           {/* Footer */}
           <div className="flex items-center justify-between px-5 sm:px-6 md:px-[22px] pb-3 sm:pb-4 md:pb-[13px] pt-6 sm:pt-8 md:pt-[38.5px]">
             <div>
-              <p className="font-['Avenir-Bold'] font-semibold text-base sm:text-lg md:text-[18px] text-[#26262B]">
+              <p className="font-['Avenir'] font-semibold text-base sm:text-lg md:text-[18px] text-[#26262B]">
                 {testimonials[currentPage].name}
               </p>
               <p className="font-['Avenir'] text-xs sm:text-sm md:text-[14px] text-[#9F9F9F]">
